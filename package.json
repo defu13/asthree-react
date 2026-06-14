@@ -1,0 +1,44 @@
+{
+  "name": "@defu13/asthree-react",
+  "version": "0.1.0",
+  "description": "Asthree, 3D ASCII render component for React",
+  "type": "module",
+  "main": "./dist/asthree-react.umd.cjs",
+  "module": "./dist/asthree-react.js",
+  "exports": {
+    ".": {
+      "import": "./dist/asthree-react.js",
+      "require": "./dist/asthree-react.umd.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "three": ">=0.150.0",
+    "@react-three/fiber": ">=8",
+    "@react-three/drei": ">=9",
+    "@react-three/postprocessing": ">=2",
+    "postprocessing": ">=6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "three": "^0.160.0",
+    "@react-three/fiber": "^8.0.0",
+    "@react-three/drei": "^9.0.0",
+    "@react-three/postprocessing": "^2.0.0",
+    "postprocessing": "^6.0.0"
+  },
+  "dependencies": {
+    "zustand": "^4.0.0"
+  },
+  "keywords": ["react", "three", "threejs", "ascii", "3d", "render", "webgl"],
+  "license": "MIT"
+}
