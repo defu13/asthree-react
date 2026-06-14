@@ -7,7 +7,7 @@ import { AsthreeEffect } from "./AsthreeEffect.jsx";
 import AsthreeModel from "./AsthreeModel.jsx";
 import CameraController from "./CameraController.jsx";
 
-function SceneContent({ settings, modelPath, resolution }) {
+function SceneContent({ settings, modelPath, resolution, hdr }) {
     const { gl } = useThree();
     const [composerReady, setComposerReady] = useState(false);
     const frameCount = useRef(0);
@@ -30,7 +30,7 @@ function SceneContent({ settings, modelPath, resolution }) {
 
     return (
         <>
-            <Environment files="/hdr/studio.hdr" background={false} />
+            <Environment files={hdr} background={false} />
             <ambientLight intensity={lights.ambient} />
             <directionalLight
                 position={lights.directional1.position}
@@ -58,7 +58,8 @@ function SceneContent({ settings, modelPath, resolution }) {
 
 export default function AsthreeScene({
     settings,
-    modelPath,
+    model,
+    hdr,
     width = "100%",
     height = "100%",
     enableOrbit = true,
@@ -129,8 +130,9 @@ export default function AsthreeScene({
                 />
                 <SceneContent
                     settings={settings}
-                    modelPath={modelPath}
+                    modelPath={model}
                     resolution={resolution}
+                    hdr={hdr}
                 />
             </Canvas>
         </div>

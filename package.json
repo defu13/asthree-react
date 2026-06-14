@@ -1,7 +1,7 @@
 {
   "name": "@defu13/asthree-react",
-  "version": "0.1.0",
-  "description": "3D ASCII render component for React",
+  "version": "0.1.1",
+  "description": "Asthree, 3D ASCII render component for React",
   "type": "module",
   "main": "./dist/asthree-react.umd.cjs",
   "module": "./dist/asthree-react.js",

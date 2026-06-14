@@ -15,6 +15,7 @@ import AsthreeScene from "./core/AsthreeScene.jsx";
 export function AsthreeRender({
     preset,
     settings,
+    hdr = "/hdr/studio.hdr",
     model = "/models/model.glb",
     width = "100%",
     height = "100%",
@@ -33,7 +34,8 @@ export function AsthreeRender({
     return (
         <AsthreeScene
             settings={resolvedSettings}
-            modelPath={model}
+            model={model}
+            hdr={hdr}
             width={width}
             height={height}
             enableOrbit={enableOrbit}
