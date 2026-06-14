@@ -2,7 +2,7 @@
 
 A React component that renders 3D models with a real-time ASCII art effect. Drop it into any React project and get an interactive, customizable ASCII render of any `.glb` model — no configuration required.
 
-![npm](https://www.npmjs.com/package/@defu13/asthree-react)
+![npm](https://img.shields.io/npm/v/@defu13/asthree-react)
 ![license](https://img.shields.io/github/license/defu13/asthree-react)
 
 ---
@@ -24,6 +24,11 @@ npm i react react-dom three @react-three/fiber @react-three/drei @react-three/po
 ---
 
 ## Quick start
+
+You'll need two assets in your project's `public` folder:
+
+- **HDR lighting file** — download a free one from [Poly Haven](https://polyhaven.com/hdris/studio) and place it at `public/hdr/studio.hdr`. I recommend [this studio light](https://polyhaven.com/a/studio_small_03).
+- **3D model** — download a free `.glb` model from [Sketchfab](https://sketchfab.com/feed) and place it at `public/models/model.glb`
 
 ```jsx
 import { AsthreeRender } from "@defu13/asthree-react";
