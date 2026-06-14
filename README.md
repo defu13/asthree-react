@@ -2,7 +2,7 @@
 
 A React component that renders 3D models with a real-time ASCII art effect. Drop it into any React project and get an interactive, customizable ASCII render of any `.glb` model — no configuration required.
 
-![npm](https://img.shields.io/npm/v/asthree-react)
+![npm](https://www.npmjs.com/package/@defu13/asthree-react)
 ![license](https://img.shields.io/github/license/defu13/asthree-react)
 
 ---
@@ -10,7 +10,7 @@ A React component that renders 3D models with a real-time ASCII art effect. Drop
 ## Installation
 
 ```bash
-npm install asthree-react
+npm i @defu13/asthree-react
 ```
 
 ### Peer dependencies
@@ -18,7 +18,7 @@ npm install asthree-react
 Make sure these are installed in your project:
 
 ```bash
-npm install react react-dom three @react-three/fiber @react-three/drei @react-three/postprocessing postprocessing
+npm i react react-dom three @react-three/fiber @react-three/drei @react-three/postprocessing postprocessing
 ```
 
 ---
@@ -26,12 +26,12 @@ npm install react react-dom three @react-three/fiber @react-three/drei @react-th
 ## Quick start
 
 ```jsx
-import { AsciiRender } from "asthree-react";
+import { AsthreeRender } from "@defu13/asthree-react";
 
 export default function App() {
     return (
-        <div style={{ width: "100%", height: "500px" }}>
-            <AsciiRender model="/models/skull.glb" />
+        <div className="h-screen w-screen">
+            <AsthreeRender model="/models/model.glb" />
         </div>
     );
 }
@@ -58,8 +58,8 @@ export default function App() {
 The easiest way to configure the render is through the **ASCII 3D Editor** — a visual tool that lets you adjust every parameter in real time and generates a short preset code you can copy and paste directly into the `preset` prop.
 
 ```jsx
-<AsciiRender
-    model="/models/robot.glb"
+<AsthreeRender
+    model="/models/model.glb"
     preset="AQQh_zNmGQwfAfQiANI"
 />
 ```
@@ -73,8 +73,8 @@ The preset encodes only the values that differ from the defaults, so codes stay 
 If you prefer to pass settings as an object instead of a preset string:
 
 ```jsx
-<AsciiRender
-    model="/models/robot.glb"
+<AsthreeRender
+    model="/models/model.glb"
     settings={{
         ascii: {
             cellSize: 12,
@@ -98,8 +98,8 @@ Partial objects are merged with the defaults, so you only need to specify what y
 
 ```jsx
 // Static render — no orbit, no zoom
-<AsciiRender
-    model="/models/bust.glb"
+<AsthreeRender
+    model="/models/model.glb"
     preset="AQQh_zNmGQwfAfQiANI"
     enableOrbit={false}
     enableZoom={false}
